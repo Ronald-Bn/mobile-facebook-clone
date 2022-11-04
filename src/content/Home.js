@@ -40,7 +40,10 @@ export default function Home() {
                 padding: "0 0 0 10px",
                 borderTop: "1px solid #E7E9EB",
                 minHeight: "58px",
+                cursor: "pointer"
             }}>
+                <iframe width="640" height="480" frameborder="0" allowfullscreen="true" allow="xr-spatial-tracking" src="https://my.matterport.com/show/?m=1NXSUZmzYy7"></iframe>
+                <iframe width="640" height="480" frameborder="0" allowfullscreen="true" allow="xr-spatial-tracking" src="https://my.matterport.com/show/?m=7SVANramdxd" ></iframe>
                 <div>
                     <Avatar src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t1.6435-9/48415344_2111842589126424_141131736288329728_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEPUMeHyNODA02AsBysDs0c3CSVQIRBsR7cJJVAhEGxHu2ciax7bjBK7N59Wx2AU7TO2Q0TumAFQx66CQ28SeMv&_nc_ohc=s3UtdsWcsjAAX9JFY5a&tn=9mgJ73YynS83WwHZ&_nc_ht=scontent.fmnl3-3.fna&oh=00_AfBlwmq0LHaTtRIiGwDocepCI8wVY-zmfG6x8Ujk4npusQ&oe=63813B0A" />
                 </div>
@@ -51,11 +54,12 @@ export default function Home() {
                         borderRadius: "20px",
                         padding: "5px 0 5px 20px",
                         fontSize: "14px",
-                        margin: "12px 10px"
+                        margin: "12px 10px",
+                        cursor: "pointer"
                     }}>
                     <a>What's on your mind?</a>
                 </div>
-                <div style={{ margin: "10px 10px 0 0" }}>
+                <div style={{ margin: "10px 10px 0 0", cursor: "pointer" }}>
                     <div style={{ marginLeft: "4px" }}>
                         <CollectionsOutlinedIcon sx={{ marginleft: "20px", color: "#60646a" }} />
                     </div>
@@ -63,16 +67,6 @@ export default function Home() {
                 </div>
             </Box>
         </>
-    );
-}
-
-
-function TodoList(props) {
-    return (
-        <div key={props.id}>
-            <b key={props.id}>{props.item} </b>
-            <button>X</button>
-        </div >
     );
 }
 

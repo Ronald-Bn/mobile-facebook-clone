@@ -10,27 +10,7 @@ import IconTabs from "./Tabs";
 import SearchIcon from '@mui/icons-material/Search';
 import SvgIcon from "@mui/material/SvgIcon";
 
-
-
-
-
-
 export default function Navbar() {
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('sm'));
-
-    const responsiveIcon = {
-        fontSize: { sm: 16, md: 32 }
-    };
-
-    const styles = {
-        largeIcon: {
-            width: 60,
-            height: 60,
-        },
-    };
-
-
     return (
         <>
             <Box sx={{
@@ -52,8 +32,8 @@ export default function Navbar() {
                     margin: "0 20px",
                 }}>
                     <a style={{ display: "block" }}>
-                        <SearchIcon style={{ color: '#fff' }} />
-                        <span style={{ fontSize: "14px", width: '90%' }}>Search</span>
+                        <SearchIcon style={{ color: '#c4d2e7' }} />
+                        <span style={{ fontSize: "14px", width: '90%', color: "#c4d2e7" }}>Search</span>
                     </a>
                 </div>
                 <IconButton>
@@ -69,10 +49,5 @@ export default function Navbar() {
     );
 }
 
-function NavItems(props) {
-    return (
-        <NavLink to={props.tolink}>{props.title}
-        </NavLink>
-    );
 
-}
+

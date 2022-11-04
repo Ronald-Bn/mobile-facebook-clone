@@ -23,8 +23,6 @@ export default function IconTabs() {
         setValue(newValue);
     };
 
-    const responsiveIcon = matches ? 'small' : 'large';
-
     const minWidth = {
         minWidth: "0",
         padding: "0",
@@ -40,18 +38,5 @@ export default function IconTabs() {
             <Tab sx={{ minWidth }} icon={<NotificationsOutlinedIcon />} to="/Notifications" component={Link} />
             <Tab sx={{ minWidth }} icon={<MenuOutlinedIcon />} to="/Menu" component={Link} />
         </Tabs>
-    );
-}
-
-function LinkTab(props) {
-    return (
-        <Tab
-            component={Link}
-            to={props.path}
-            onClick={(event) => {
-                event.preventDefault();
-            }}
-            {...props}
-        />
     );
 }
