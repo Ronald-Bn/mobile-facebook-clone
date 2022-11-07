@@ -45,13 +45,13 @@ const styledFlex = [
     }
 ];
 
-function Timeline(props) {
+function PostVideos(props) {
     return (
-        <>
+        <Box sx={{ border: "1px solid #D7DADE", margin: "5px 0px", borderRadius: "15px" }}>
             <Box sx={{
                 display: "flex",
                 padding: "10px 10px 0",
-                margin: "0 0 12px"
+                margin: "0 0 12px",
             }}>
                 <StyledBadge anchorOrigin={{
                     vertical: 'bottom',
@@ -67,6 +67,8 @@ function Timeline(props) {
                             lineHeight: "16px"
                         }}>
                             {props.name}
+
+                            <span>. follow</span>
                         </Box>
                         <Box sx={{
                             fontSize: "12px",
@@ -90,10 +92,17 @@ function Timeline(props) {
                 }}>
                     {props.posts}
                 </a>
-                <Box sx={{ maxWidth: "320px", margin: "0 auto" }}>
-                    <img
-                        style={{ width: "100%" }}
-                        src={props.img} />
+                <Box sx={{ maxWidth: "100%", margin: "0 auto" }}>
+                    <video
+                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                        playsInline
+                        loop
+                        muted
+                        controls
+                        autoPlay
+                        alt="All the devices"
+                        src="https://firebasestorage.googleapis.com/v0/b/hosting-storage-403c5.appspot.com/o/Twice%2FChayeoung%2Ftalk-that-talk-challenge-by-sana-jihyo-and-chaeyoung-shorts-twice-1906-ytshorts.savetube.me.mp4?alt=media&token=55639bfb-0f4e-4e11-bb7b-52f6ad1387bf"
+                    />
                 </Box>
             </Box>
             <Box sx={{
@@ -109,27 +118,22 @@ function Timeline(props) {
                 <Box>
                     <img src={HeartReact} style={{ width: "16px", height: "16px" }} />
                     <img src={LikeReact} style={{ width: "16px", height: "16px", marginLeft: "-2px" }} />
-                    <Box sx={{ display: "inline-block", marginLeft: "5px" }}>
-                        Ronald and others
-                    </Box>
+                    <Box sx={{ display: "inline-block", marginLeft: "5px" }}> Ronald and others </Box>
                 </Box>
-                <Box>
-                    9 comments
-                </Box>
+                <Box> 9 comments</Box>
             </Box>
             <Box sx={{
                 display: "flex",
                 lineHeight: "36px",
                 borderTop: "1px solid #ccd0d5",
-                borderBottom: "10px solid #ccd0d5"
             }}>
                 <Box sx={styledFlex}><ThumbUpOutlinedIcon />Like</Box>
                 <Box sx={styledFlex}><ChatBubbleOutlineOutlinedIcon />Comment</Box>
                 <Box sx={styledFlex}>Share</Box>
             </Box>
-        </>
+        </Box>
 
     );
 }
 
-export default Timeline
+export default PostVideos

@@ -2,15 +2,32 @@ import Avatar from "@mui/material/Avatar";
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import CollectionsOutlinedIcon from '@mui/icons-material/CollectionsOutlined';
-import List from "@mui/material/List";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AddStory from "./AddStory";
 import StoryTray from "./StoryTray";
 import Timeline from "./Timeline";
+import { db } from "../../firebase/config";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
+import PreLoader from "../../components/PreLoader";
 
 
 
-export default function Home() {
+function Home() {
+    const [data, setData] = useState(null);
+    const fetchPosts = async () => {
+        await getDocs(query(collection(db, "posts"), orderBy("createdAt", "desc")))
+            .then((QuerySnapshot) => {
+                const newData = QuerySnapshot.docs
+                    .map((doc) => ({ ...doc.data() }));
+                setData(newData);
+                console.log(newData);
+            })
+    };
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
     return (
         <>
             <Box sx={{
@@ -84,11 +101,23 @@ export default function Home() {
                     <StoryTray />
                 </Box>
             </Box>
-            <Box>
-                <Timeline />
-            </Box>
+            {data &&
+                <Box>
+                    {data.map((data, index) => {
+                        return (
+                            <Timeline
+                                key={index}
+                                name={data.name}
+                                date={data.createdAt.toDate().toDateString()}
+                                posts={data.post}
+                                img={data.img} />
+                        );
+                    })
+                    }
+                </Box>
+            }
         </>
     );
 }
 
-
+export default Home

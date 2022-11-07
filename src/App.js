@@ -7,7 +7,7 @@ import Home from "./content/Home/Home";
 import Navbar from "./components/Navbar";
 import Friends from "./content/Friends";
 import Saved from "./content/Saved";
-import Videos from "./content/Videos";
+import Videos from "./content/Videos/Videos";
 import Notifications from "./content/Notifications";
 import Menu from "./content/Menu";
 

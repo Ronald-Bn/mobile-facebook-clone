@@ -30,7 +30,7 @@ export default function IconTabs() {
     };
 
     return (
-        <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" variant="fullWidth" sx={{ minHeight: "40px" }}>
+        <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" variant="fullWidth" sx={{ minHeight: "40px", borderBottom: "1px solid #E7E9EB" }}>
             <Tab sx={{ minWidth }} icon={<HomeIcon />} to="/" component={Link} />
             <Tab sx={{ minWidth }} icon={<GroupOutlinedIcon />} to="/Friends" component={Link} />
             <Tab sx={{ minWidth }} icon={<BookmarkBorderOutlinedIcon />} to="/Saved" component={Link} />
