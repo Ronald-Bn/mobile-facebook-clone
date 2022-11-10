@@ -48,7 +48,7 @@ function Notifications() {
     return (
         <Box>
             {data && <>
-                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #E7E9EB", padding: "0 10px" }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0 10px" }}>
                     <Box>
                         <b>Notifications</b>
                     </Box>

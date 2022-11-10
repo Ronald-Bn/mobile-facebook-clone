@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import HomeIcon from '@mui/icons-material/Home';
@@ -9,15 +9,22 @@ import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Link } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
 
 
 
 export default function IconTabs() {
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('sm'));
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
+    const y = ["/", "/Friends", "/Saved", "/Videos", "/Notifications", "/Menu"];
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        for (let i = 0; i < y.length; i++) {
+            if (pathname === y[i]) {
+                setValue(i);
+            }
+        }
+    }, [])
 
     const handleChange = (event, newValue) => {
         setValue(newValue);

@@ -47,7 +47,11 @@ const styledFlex = [
 
 function PostVideos(props) {
     return (
-        <Box sx={{ border: "1px solid #D7DADE", margin: "5px 0px", borderRadius: "15px" }}>
+        <Box sx={{
+            border: "1px solid #D7DADE",
+            margin: "5px 0px",
+            borderRadius: "15px"
+        }}>
             <Box sx={{
                 display: "flex",
                 padding: "10px 10px 0",
@@ -59,15 +63,24 @@ function PostVideos(props) {
                 }} variant="dot" color="success" overlap="circular">
                     <Avatar src="https://scontent.fmnl3-3.fna.fbcdn.net/v/t1.6435-9/48415344_2111842589126424_141131736288329728_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEPUMeHyNODA02AsBysDs0c3CSVQIRBsR7cJJVAhEGxHu2ciax7bjBK7N59Wx2AU7TO2Q0TumAFQx66CQ28SeMv&_nc_ohc=s3UtdsWcsjAAX9JFY5a&tn=9mgJ73YynS83WwHZ&_nc_ht=scontent.fmnl3-3.fna&oh=00_AfBlwmq0LHaTtRIiGwDocepCI8wVY-zmfG6x8Ujk4npusQ&oe=63813B0A" alt="" />
                 </StyledBadge>
-                <Box sx={{ display: "flex", width: "100%", minHeight: "40px", alignItems: "center" }}>
-                    <Box sx={{ paddingLeft: "8px", fontFamily: "Helvetica, Arial, sans-serif", width: "100%" }}>
+                <Box sx={{
+                    display: "flex",
+                    width: "100%",
+                    minHeight: "40px",
+                    alignItems: "center"
+                }}>
+                    <Box sx={{
+                        paddingLeft: "8px",
+                        fontFamily: "Helvetica, Arial, sans-serif",
+                        width: "100%"
+                    }}>
                         <Box sx={{
                             fontWeight: "bold",
                             fontSize: "14px",
                             lineHeight: "16px"
                         }}>
-                            {props.name}
-
+                            {props.name + " "}
+                            <span>posted a video to playlist <b>Memes</b></span>
                             <span>. follow</span>
                         </Box>
                         <Box sx={{
@@ -92,18 +105,15 @@ function PostVideos(props) {
                 }}>
                     {props.posts}
                 </a>
-                <Box sx={{ maxWidth: "100%", margin: "0 auto" }}>
-                    <video
-                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
-                        playsInline
-                        loop
-                        muted
-                        controls
-                        autoPlay
-                        alt="All the devices"
-                        src="https://firebasestorage.googleapis.com/v0/b/hosting-storage-403c5.appspot.com/o/Twice%2FChayeoung%2Ftalk-that-talk-challenge-by-sana-jihyo-and-chaeyoung-shorts-twice-1906-ytshorts.savetube.me.mp4?alt=media&token=55639bfb-0f4e-4e11-bb7b-52f6ad1387bf"
-                    />
-                </Box>
+            </Box>
+            <Box sx={{ maxWidth: "100%", margin: "0 auto" }}>
+                <video
+                    style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                    playsInline
+                    controls
+                    alt="All the devices"
+                    src={props.video}
+                />
             </Box>
             <Box sx={{
                 display: "flex",

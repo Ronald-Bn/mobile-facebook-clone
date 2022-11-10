@@ -11,7 +11,6 @@ import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import PreLoader from "../../components/PreLoader";
 
 
-
 function Home() {
     const [data, setData] = useState(null);
     const fetchPosts = async () => {
@@ -101,7 +100,7 @@ function Home() {
                     <StoryTray />
                 </Box>
             </Box>
-            {data &&
+            {data ?
                 <Box>
                     {data.map((data, index) => {
                         return (
@@ -115,6 +114,7 @@ function Home() {
                     })
                     }
                 </Box>
+                : <PreLoader />
             }
         </>
     );

@@ -55,7 +55,7 @@ function Friends() {
 
             {data ?
                 <Box>
-                    <Box sx={{ border: "1px solid #c9ccd1", padding: "10px" }}>
+                    <Box sx={{ borderBottom: "1px solid #c9ccd1", padding: "10px" }}>
                         <LightButton sx={{ fontSize: "14px", marginRight: "6px" }}>
                             Suggestion
                         </LightButton>

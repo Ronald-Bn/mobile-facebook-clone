@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
     BrowserRouter as Router,
     Route, Routes
@@ -6,7 +6,7 @@ import {
 import Home from "./content/Home/Home";
 import Navbar from "./components/Navbar";
 import Friends from "./content/Friends";
-import Saved from "./content/Saved";
+import Saved from "./content/Saved/Saved";
 import Videos from "./content/Videos/Videos";
 import Notifications from "./content/Notifications";
 import Menu from "./content/Menu";
