@@ -75,13 +75,16 @@ function PostVideos(props) {
                         width: "100%"
                     }}>
                         <Box sx={{
-                            fontWeight: "bold",
                             fontSize: "14px",
                             lineHeight: "16px"
                         }}>
-                            {props.name + " "}
-                            <span>posted a video to playlist <b>Memes</b></span>
-                            <span>. follow</span>
+                            <b>{props.name + " "}</b>
+                            <span>posted a video to playlist <b>Memes.</b></span>
+                            <span style={{
+                                color: "#3578e5",
+                                fontFamily: "Helvetica, Arial, sans-serif",
+                                fontSize: "13px"
+                            }}> Follow</span>
                         </Box>
                         <Box sx={{
                             fontSize: "12px",

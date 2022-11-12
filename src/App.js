@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
     BrowserRouter as Router,
     Route, Routes
@@ -9,7 +9,7 @@ import Friends from "./content/Friends";
 import Saved from "./content/Saved/Saved";
 import Videos from "./content/Videos/Videos";
 import Notifications from "./content/Notifications";
-import Menu from "./content/Menu";
+import Menu from "./content/Menu/Menu";
 
 function App() {
     return (

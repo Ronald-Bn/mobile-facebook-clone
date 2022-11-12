@@ -1,19 +1,20 @@
 // import BookmarkIcon from "../img/icons8-bookmark-50-1.png";
-import BookmarkIcon from "../img/icons8-bookmark-50.png";
-import MarketIcon from "../img/icons8-bookmark-50.png";
-import FriendsIcon from "../img/icons8-friends-50.png";
-import GroupIcon from "../img/icons8-groupme-50.png";
-import EventsIcon from "../img/icons8-important-event-50.png";
-import FollowingIcon from "../img/icons8-phonelink-ring-50.png";
-import GamingIcon from "../img/icons8-playstation-4-50.png";
-import OnThisDayIcon from "../img/icons8-today-50.png";
-import WatchIcon from "../img/icons8-tv-show-50.png";
+import SavedIcon from "../img/saved.png";
+import FollowingIcon from "../img/following.png";
+import MarketPlaceIcon from "../img/marketplace.png";
+import VideosIcon from "../img/videos.png";
+import EventsIcon from "../img/events.png";
+import GroupsIcon from "../img/following.png";
+import OnThisDayIcon from "../img/onthisday.png";
+import FriendsIcon from "../img/friends.png";
+import GamingIcon from "../img/gaming.png";
+
 
 
 export const MenuData = [
     {
         name: "Saved",
-        img: BookmarkIcon,
+        img: SavedIcon,
         path: "",
     },
     {
@@ -23,17 +24,17 @@ export const MenuData = [
     },
     {
         name: "Groups",
-        img: GroupIcon,
+        img: GroupsIcon,
         path: "",
     },
     {
         name: "Marketplace",
-        img: MarketIcon,
+        img: MarketPlaceIcon,
         path: "",
     },
     {
         name: "Videos on Watch",
-        img: WatchIcon,
+        img: VideosIcon,
         path: "",
     },
     {
