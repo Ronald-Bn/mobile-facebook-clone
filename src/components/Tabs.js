@@ -7,10 +7,7 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import OndemandVideoOutlinedIcon from '@mui/icons-material/OndemandVideoOutlined';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link, useLocation } from 'react-router-dom';
-
 
 
 export default function IconTabs() {

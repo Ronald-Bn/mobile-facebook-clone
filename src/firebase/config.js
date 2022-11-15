@@ -2,8 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 
-
-// config
 const firebaseConfig = {
     apiKey: "AIzaSyBBbBy348uSOEW_8ln9n4L900JjSw8dupk",
     authDomain: "notes-web-app-ead92.firebaseapp.com",
@@ -15,9 +13,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-
-// the firestore;
 const db = getFirestore(app);
 
-export { db };
+
+export { db }

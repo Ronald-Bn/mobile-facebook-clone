@@ -34,7 +34,7 @@ function Menu() {
                 </Box>
             </Link>
             <hr style={{ margin: "0.3em 10px" }} />
-            <Box>
+            <Box sx={{ fontFamily: "SFUIText-Regular, Roboto, 'Droid Sans', Helvetica, sans-serif" }}>
                 {MenuData.map((item, index) => {
                     return (
                         <MenuLists key={index} name={item.name} img={item.img} />

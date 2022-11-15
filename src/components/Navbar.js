@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import Avatar from "@mui/material/Avatar";
+import React from "react";
 import Box from "@mui/material/Box";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import IconButton from "@mui/material/IconButton"
 import IconTabs from "./Tabs";
 import SearchIcon from '@mui/icons-material/Search';
 import SvgIcon from "@mui/material/SvgIcon";
+
 
 export default function Navbar() {
     return (

@@ -2,9 +2,10 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Link } from 'react-router-dom';
 
+
 function MenuLists(props) {
     return (
-        <Link style={{ cursor: "pointer", textDecoration: "none" }} to={props.path}>
+        <Link style={{ cursor: "pointer", textDecoration: "none" }} to={props.path} >
             <Box sx={{
                 display: "flex",
                 alignItems: "center"

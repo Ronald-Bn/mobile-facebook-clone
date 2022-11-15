@@ -5,11 +5,12 @@ import {
 } from "react-router-dom";
 import Home from "./content/Home/Home";
 import Navbar from "./components/Navbar";
-import Friends from "./content/Friends";
+import Friends from "./content/Friends/Friends";
 import Saved from "./content/Saved/Saved";
 import Videos from "./content/Videos/Videos";
-import Notifications from "./content/Notifications";
+import Notifications from "./content/Notifications/Notifications";
 import Menu from "./content/Menu/Menu";
+
 
 function App() {
     return (

@@ -12,7 +12,6 @@ import TermsIcon from "../../img/terms.png";
 import SafetyIcon from "../../img/safety.png";
 
 
-
 function MenuDropDownLists() {
     const [open, setOpen] = useState(true);
 
@@ -21,7 +20,7 @@ function MenuDropDownLists() {
     };
 
     return (
-        <List sx={{ width: '100%', bgcolor: 'background.paper', padding: "0" }}>
+        <List sx={{ width: '100%', padding: "0" }}>
             <Box onClick={handleClick} sx={{
                 display: "flex",
                 alignItems: "center",
@@ -41,7 +40,7 @@ function MenuDropDownLists() {
                 {open ? <ExpandLess /> : <ExpandMore />}
             </Box>
             <Collapse in={open} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+                <List component="div" disablePadding >
                     <MenuLists name="Help Center" img={HelpCenterIcon} />
                     <MenuLists name="Report a Problem" img={ReportIcon} />
                     <MenuLists name="Terms & Policies" img={TermsIcon} />

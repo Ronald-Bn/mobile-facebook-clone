@@ -7,11 +7,8 @@ import { styled } from "@mui/material/styles";
 import PublicIcon from '@mui/icons-material/Public';
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import HappyReact from "../../img/react-happy.png";
 import HeartReact from "../../img/react-heart.png";
 import LikeReact from "../../img/react-like.png";
-
-
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({

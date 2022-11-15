@@ -27,7 +27,7 @@ function Collections(props) {
                     border: "2px solid #fff",
                     width: 36,
                     height: 36,
-                }} />
+                }}>{props.category.charAt(0)}</Avatar>
             </Box>
             <Box sx={{
                 position: "relative",
